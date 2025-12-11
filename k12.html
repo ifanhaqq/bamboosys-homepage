@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BambooCloud K12 - Smart Learning Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #059669; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation (Consistent with Homepage) -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
+                        <i data-lucide="sprout" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-2xl tracking-tight text-emerald-900">Bamboo<span class="text-emerald-600">Cloud</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Dropdown for Solutions -->
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-sm font-medium text-emerald-600 hover:text-emerald-700 focus:outline-none py-2">
+                            Solutions
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"></i>
+                        </button>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="absolute left-0 mt-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 translate-y-2 group-hover:translate-y-0">
+                            <div class="p-2">
+                                <a href="k12.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition">
+                                    <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">BambooCloud K12</div>
+                                        <div class="text-xs text-slate-400">For primary education</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">BambooCloud H-ED</div>
+                                        <div class="text-xs text-slate-400">For higher education</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition">
+                                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="building-2" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">BambooCloud Enterprise</div>
+                                        <div class="text-xs text-slate-400">Corporate training</div>
+                                    </div>
+                                </a>
+                                <div class="h-px bg-slate-100 my-1"></div>
+                                <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition">BambooClass</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition">BambooCloud Market</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:text-emerald-600 hover:bg-slate-50 rounded-md transition">Mobile App</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="features.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition">Features</a>
+                    <a href="partners.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition">Partners</a>
+                    <a href="portfolio.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition">Portfolio</a>
+                    <a href="faqs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition">FAQs</a>
+                    <button onclick="window.location.href='contact.html'" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg shadow-emerald-200">
+                        Request Demo
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-emerald-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header / Hero -->
+    <header class="relative pt-32 pb-20 overflow-hidden bg-slate-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="K12 Education" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                BambooCloud K12
+            </h1>
+            <p class="text-xl text-emerald-100 max-w-2xl mx-auto">
+                Empowering the next generation with smart, data-driven learning solutions.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Sidebar (Left Column) -->
+
+            <!-- Main Content (Right Column) -->
+            <main class="lg:col-span-12 space-y-12">
+                
+                <!-- Intro Text -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">BambooCloud K12 Smart Learning</h2>
+                    <div class="prose prose-slate max-w-none text-slate-600">
+                        <p class="mb-4 text-lg leading-relaxed">
+                            BambooCloud K12 smart learning platform is the next generation learning solution based on the latest cloud and AI technology. Aiming to create the future-ready learning space in the digital age, helping each student to unleash their full potential.
+                        </p>
+                        <p class="leading-relaxed">
+                            Our platform is precise in identifying areas to increase student engagement which leads to significant improvements in results. By combining data analytics with intuitive interfaces, we bridge the gap between teachers, students, and parents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Features Zig-Zag Layout -->
+                <div class="space-y-20">
+                    
+                    <!-- Feature 1: Knowledge Radar Chart -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform -rotate-1 hover:rotate-0 transition duration-500">
+                                <!-- Mockup of a radar chart -->
+                                <div class="bg-slate-50 rounded-lg p-4 aspect-video flex items-center justify-center relative overflow-hidden">
+                                     <img src="./images/knowledgeradarchart.png" alt="Radar Chart UI" class="object-cover w-full h-full opacity-90 hover:scale-105 transition">
+                                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                         <div class="bg-white/90 p-4 rounded-full shadow-sm">
+                                            <i data-lucide="radar" class="w-8 h-8 text-emerald-500"></i>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pl-8">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Knowledge Radar Chart</h3>
+                            <div class="w-12 h-1 bg-emerald-500 mb-4 rounded-full"></div>
+                            <p class="text-slate-600 leading-relaxed">
+                                Students will acknowledge the detailed progress and performance of each knowledge point in a particular course. Visualize strengths and weaknesses instantly to achieve targeted learning paths.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Error Bank (Reversed) -->
+                    <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform rotate-1 hover:rotate-0 transition duration-500">
+                                <div class="bg-slate-50 rounded-lg p-4 aspect-video flex items-center justify-center relative overflow-hidden">
+                                    <img src="./images/smarterrorbank.png" alt="Error Bank UI" class="object-cover w-full h-full opacity-90 hover:scale-105 transition">
+                                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                         <div class="bg-white/90 p-4 rounded-full shadow-sm">
+                                            <i data-lucide="alert-circle" class="w-8 h-8 text-red-500"></i>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pr-8">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Smart Error Bank</h3>
+                            <div class="w-12 h-1 bg-emerald-500 mb-4 rounded-full"></div>
+                            <p class="text-slate-600 leading-relaxed">
+                                The system automatically generates a personalized "Error Bank" for each student after answering questions. Students can review specific mistakes, filtering by knowledge point, difficulty level, or question type.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Customized Learning Report -->
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform -rotate-1 hover:rotate-0 transition duration-500">
+                                <div class="bg-slate-50 rounded-lg p-4 aspect-video flex items-center justify-center relative overflow-hidden">
+                                    <img src="./images/learningreport.png" alt="Reporting UI" class="object-cover w-full h-full opacity-90 hover:scale-105 transition">
+                                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                         <div class="bg-white/90 p-4 rounded-full shadow-sm">
+                                            <i data-lucide="file-check" class="w-8 h-8 text-blue-500"></i>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pl-8">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Customized Learning Report</h3>
+                            <div class="w-12 h-1 bg-emerald-500 mb-4 rounded-full"></div>
+                            <p class="text-slate-600 leading-relaxed">
+                                Generate comprehensive reports that go beyond grades. Teachers and parents get deep insights into learning behaviors, time management, and concept mastery to support the student's journey.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4: Self Test Support (Reversed) -->
+                    <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                        <div class="w-full md:w-1/2">
+                            <div class="bg-white p-2 rounded-xl shadow-lg border border-slate-100 transform rotate-1 hover:rotate-0 transition duration-500">
+                                <div class="bg-slate-50 rounded-lg p-4 aspect-video flex items-center justify-center relative overflow-hidden">
+                                    <img src="./images/selftestsupport.png" alt="Self Test UI" class="object-cover w-full h-full opacity-90 hover:scale-105 transition">
+                                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                         <div class="bg-white/90 p-4 rounded-full shadow-sm">
+                                            <i data-lucide="pen-tool" class="w-8 h-8 text-purple-500"></i>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 md:pr-8">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Self Test Support</h3>
+                            <div class="w-12 h-1 bg-emerald-500 mb-4 rounded-full"></div>
+                            <p class="text-slate-600 leading-relaxed">
+                                Empower student agency. Students can create their own self-tests to target weak areas, selecting specific chapters or difficulty levels to practice at their own pace.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer (Consistent with Homepage) -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4 text-white">
+                    <i data-lucide="sprout" class="w-6 h-6 text-emerald-500"></i>
+                    <span class="font-bold text-xl">BambooCloud</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-6">
+                    Bamboo System Technology Co., Ltd. <br>
+                    Empowering education through technology.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Company</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-emerald-400 transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Careers</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Partners</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Product</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-emerald-400 transition">Features</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Pricing</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Security</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">API Docs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact</h4>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-emerald-500"></i>
+                        <span>123 Bamboo Ave, Tech District, Singapore 018988</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
+                        <span>+65 6789 1234</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-emerald-500"></i>
+                        <span>hello@bamboocloud.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2023 Bamboo System Technology. All rights reserved. Privacy Policy | Terms of Service
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-white/95');
+                navbar.classList.add('bg-white/90');
+            }
+        });
+    </script>
+</body>
+</html>
