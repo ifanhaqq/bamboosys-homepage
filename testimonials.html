@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BambooCloud - Testimonials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font for quote marks -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #059669; }
+        
+        .quote-mark {
+            font-family: 'Merriweather', serif;
+        }
+        
+        /* Carousel Transitions */
+        .carousel-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            overflow: hidden;
+            min-height: 300px;
+        }
+
+        .carousel-item {
+            grid-column: 1;
+            grid-row: 1;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            visibility: hidden;
+            /* Default hidden state (will be overridden by specific classes) */
+            transform: translateX(100px); 
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+            visibility: visible;
+            z-index: 10;
+        }
+
+        /* States for sliding */
+        .carousel-item.slide-left {
+            transform: translateX(-100px);
+        }
+        
+        .carousel-item.slide-right {
+            transform: translateX(100px);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[450px] flex items-center justify-center overflow-hidden bg-slate-900">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Testimonials Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-6 uppercase drop-shadow-2xl">
+                Testimonials
+            </h1>
+            <div class="w-24 h-1.5 bg-emerald-500 mx-auto rounded-full"></div>
+        </div>
+    </header>
+
+    <!-- Testimonials Carousel Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">What Our Clients Say</h2>
+            </div>
+
+            <div class="relative bg-white rounded-2xl p-4 md:p-12">
+                <!-- Large Quote Icon -->
+                <div class="text-center mb-8">
+                    <span class="quote-mark text-6xl text-[#8dc63f] leading-none">“</span>
+                </div>
+
+                <!-- Carousel Content -->
+                <div id="testimonial-carousel" class="carousel-container relative">
+                    
+                    <!-- Item 1 (From Screenshot) -->
+                    <div class="carousel-item active">
+                        <div class="text-center space-y-8">
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto">
+                                "Through online teaching, we have realized teacher-student interaction in space. Online education is very different from traditional teaching. The diversity of the functions of BambooCloud helped us tailor-made learning solutions for different students and improve learning efficiency."
+                            </p>
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto">
+                                "In particular, we greatly stimulate students interactivity and motivation with learning and forum community functions. At the moment when the epidemic is raging, BambooCloud has ensured the normal operation of our teaching and further promoted our teaching innovation."
+                            </p>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900">Camille Chen</h4>
+                                <p class="text-xs uppercase tracking-widest text-slate-500 mt-1 font-semibold">Director of Synergy Learning Lab (Singapore)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (Mock Data) -->
+                    <div class="carousel-item slide-right">
+                        <div class="text-center space-y-8">
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto">
+                                "BambooCloud has transformed how we deliver training to our global workforce. The ability to seamlessly integrate with our existing HR systems saved us months of implementation time."
+                            </p>
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto">
+                                "The analytics dashboard gives us insights we never had before, allowing us to identify skill gaps proactively rather than reactively."
+                            </p>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900">Sarah Jenkins</h4>
+                                <p class="text-xs uppercase tracking-widest text-slate-500 mt-1 font-semibold">HR Director, TechCorp Global</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Mock Data) -->
+                    <div class="carousel-item slide-right">
+                        <div class="text-center space-y-8">
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto">
+                                "As an educational institution, stability and ease of use are paramount. BambooCloud delivers on both fronts. Our students love the mobile app, and our professors find the course creation tools incredibly intuitive."
+                            </p>
+                            <p class="text-slate-600 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto">
+                                "Support has been phenomenal. Any questions we have are answered almost immediately by their dedicated team."
+                            </p>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900">Dr. James Wong</h4>
+                                <p class="text-xs uppercase tracking-widest text-slate-500 mt-1 font-semibold">Dean of Digital Learning, City University</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <div class="flex justify-center items-center gap-4 mt-12 z-20 relative">
+                    <button onclick="prevSlide()" class="p-3 rounded-full border border-slate-200 text-slate-400 hover:border-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="p-3 rounded-full border border-slate-200 text-slate-400 hover:border-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent) -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 mb-4 text-white">
+                    <i data-lucide="sprout" class="w-6 h-6 text-emerald-500"></i>
+                    <span class="font-bold text-xl">BambooCloud</span>
+                </div>
+                <p class="text-sm text-slate-400 mb-6">
+                    Bamboo System Technology Co., Ltd. <br>
+                    Empowering education through technology.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-emerald-400 transition"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Company</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-emerald-400 transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Careers</a></li>
+                    <li><a href="bamboocloud_partners.html" class="hover:text-emerald-400 transition">Partners</a></li>
+                    <li><a href="bamboocloud_contact.html" class="hover:text-emerald-400 transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Product</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="bamboocloud_features.html" class="hover:text-emerald-400 transition">Features</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Pricing</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">Security</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">API Docs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact</h4>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-emerald-500"></i>
+                        <span>123 Bamboo Ave, Tech District, Singapore 018988</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
+                        <span>+65 6789 1234</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-emerald-500"></i>
+                        <span>hello@bamboocloud.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2023 Bamboo System Technology. All rights reserved. Privacy Policy | Terms of Service
+        </div>
+    </footer>
+
+    <script src="navbar.js"></script>
+
+    <script>
+        lucide.createIcons();
+        // Advanced Carousel Logic with Animations
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        let isAnimating = false;
+
+        // Initialize positions
+        slides.forEach((slide, index) => {
+            if(index !== 0) {
+                slide.classList.add('slide-right');
+            }
+        });
+
+        function updateSlideClasses(prevIndex, nextIndex, direction) {
+            const prevSlide = slides[prevIndex];
+            const nextSlide = slides[nextIndex];
+
+            // Reset classes for the departing slide
+            prevSlide.classList.remove('active', 'slide-left', 'slide-right');
+            
+            // Reset classes for the entering slide
+            nextSlide.classList.remove('active', 'slide-left', 'slide-right');
+
+            if (direction === 'next') {
+                // Moving Next: Old slide goes Left, New slide comes from Right
+                prevSlide.classList.add('slide-left');
+                
+                // Force browser reflow to ensure the animation plays correctly if we just removed a class
+                void nextSlide.offsetWidth; 
+                
+                // We want the next slide to start from right (it should already be there ideally, but let's ensure)
+                // Actually, CSS transitions handle the move TO the state.
+                // For the entering slide, we want it to Transition TO 'active' (0px).
+                // Before we add 'active', we must ensure it is positioned at 'slide-right' (100px) instantly without transition.
+                
+                // Since we rely on CSS classes state:
+                // 1. Set New slide to start position (no animation)
+                nextSlide.style.transition = 'none';
+                nextSlide.classList.add('slide-right');
+                void nextSlide.offsetWidth; // flush
+                
+                // 2. Animate to active
+                nextSlide.style.transition = '';
+                nextSlide.classList.remove('slide-right');
+                nextSlide.classList.add('active');
+
+            } else {
+                // Moving Prev: Old slide goes Right, New slide comes from Left
+                prevSlide.classList.add('slide-right');
+                
+                // 1. Set New slide to start position (Left)
+                nextSlide.style.transition = 'none';
+                nextSlide.classList.add('slide-left');
+                void nextSlide.offsetWidth; // flush
+                
+                // 2. Animate to active
+                nextSlide.style.transition = '';
+                nextSlide.classList.remove('slide-left');
+                nextSlide.classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const prevIndex = currentSlide;
+            currentSlide = (currentSlide + 1) % slides.length;
+            
+            updateSlideClasses(prevIndex, currentSlide, 'next');
+
+            setTimeout(() => { isAnimating = false; }, 600); // Match CSS transition duration
+        }
+
+        function prevSlide() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const prevIndex = currentSlide;
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+
+            updateSlideClasses(prevIndex, currentSlide, 'prev');
+
+            setTimeout(() => { isAnimating = false; }, 600);
+        }
+
+        // Auto-advance every 8 seconds
+        let autoPlay = setInterval(nextSlide, 8000);
+
+        // Pause on hover (optional enhancement for UX)
+        const container = document.getElementById('testimonial-carousel');
+        container.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        container.addEventListener('mouseleave', () => autoPlay = setInterval(nextSlide, 8000));
+    </script>
+</body>
+</html>
